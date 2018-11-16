@@ -25,7 +25,7 @@ node {
 
         stage('backend tests') {
             try {
-              //  sh "./mvnw test"
+                sh "./mvnw test"
             } catch(err) {
                 throw err
             } finally {
@@ -35,7 +35,7 @@ node {
 
         stage('frontend tests') {
             try {
-              //  sh "./mvnw com.github.eirslett:frontend-maven-plugin:npm -Dfrontend.npm.arguments='test -- -u'"
+                sh "./mvnw com.github.eirslett:frontend-maven-plugin:npm -Dfrontend.npm.arguments='test -- -u'"
             } catch(err) {
                 throw err
             } finally {
