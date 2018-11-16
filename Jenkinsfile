@@ -57,7 +57,7 @@ node {
     }
 
     stage('publish docker') {
-        docker.withRegistry('https://registry.hub.docker.com', 'fla9213') {
+        docker.withRegistry('https://registry.hub.docker.com', 'docker-login') {
             dockerImage.push 'latest'
         }
     }
